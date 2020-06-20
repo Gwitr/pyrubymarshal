@@ -25,12 +25,12 @@ print(res.type)  # RPG::Map
 ```
 
 ## Types
-RubyObject - a ruby object. You can access its `type` field to get its Ruby class name
-Symbol - a ruby symbol.
-IVar - an instance variable, whatever that is. Its `v` attribute contains the actual value.
-MarshalError - an exception raised when the file can't be decoded.
+* RubyObject - a ruby object. You can access its `type` field to get its Ruby class name
+* Symbol - a ruby symbol.
+* IVar - an instance variable, whatever that is. Its `v` attribute contains the actual value.
+* MarshalError - an exception raised when the file can't be decoded.
 
 ## TODO
-Add more error checking
-Add more RGSS types
-Add an option to marshal python objects
+* Add more error checking
+* Add more RGSS types
+* Add an option to marshal python objects
