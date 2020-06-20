@@ -1,7 +1,13 @@
+import warnings
+
 class IVar():
 
     def __init__(self, v, encoding=None):
-        self.v = v.decode(encoding.decode("latin1"))
+        try:
+            self.v = v.decode(encoding.decode("latin1"))
+        except LookupError as e:
+            warnings.warn(UserWarning(str(e)))
+            self.v = v
         # self.encoding = encoding
 
     def __repr__(self):
