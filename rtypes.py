@@ -1,10 +1,14 @@
 import warnings
 
 class IVar():
-
+    """Doesn't work"""
     def __init__(self, v, encoding=None):
         try:
-            self.v = v.decode(encoding.decode("latin1"))
+            try:
+                self.v = v.decode(encoding.decode("latin1"))
+            except Exception as e:
+                print(e)
+                self.v = v
         except LookupError as e:
             warnings.warn(UserWarning(str(e)))
             self.v = v
